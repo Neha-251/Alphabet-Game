@@ -1,0 +1,21 @@
+
+
+.keyboard_mainDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin: 100px auto;
+    font-size: 30px;
+    padding-bottom: 200px;
+}
+
+.keyboard_mainDiv div{
+    /* margin: 20px; */
+}
+
+.keyboard_mainDiv span{
+    border: 1px solid;
+    padding: 10px 15px;
+    cursor: pointer;
+    /* background-color: pink; */
+}
