@@ -21,7 +21,7 @@ export const Keyboard = () => {
     
             if (count === 0) {
                 setMsg("You Typed Wrong Alphabet")
-            
+                // setTypedKeys("")
             }
         }
 

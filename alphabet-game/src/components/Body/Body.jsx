@@ -145,9 +145,14 @@ export const Body = () => {
     console.log("fail", fail)
     useEffect(()=> {
 
-        if(msg.length > 1){
-            console.log('msg', msg)
-            console.log('msg.length', msg.length)
+        if(msg === "You Typed Wrong Alphabet"){
+            setFail(true)
+            setTimeout(()=> {
+                setFail(false)
+            }, 5000)
+        }
+        else if(msg.length > 1){
+            
             setFail(true)
             setIsStart(false)
 
@@ -163,6 +168,8 @@ export const Body = () => {
         setReset(false)
     }, [reset])
 
+
+
     return (
         <div className="body_mainDiv">
             <div className={success ? "success_text" : "display_none"}> <span className="Won_p">Congrats! You have won</span> </div>
@@ -176,6 +183,7 @@ export const Body = () => {
             </div>
             <div className="alph_inp_div">
                 <span>{typedKeys}</span>
+                {/* <input className="alph_inp_div" type="text" onChange={(e)=>handleInpChange(e)} autoFocus /> */}
             </div>
         </div>
     )
